@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime Next Watch</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <h1>Anime Next Watch</h1>
+
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search anime...">
+
+      <select id="genreFilter">
+        <option value="">All Genres</option>
+      </select>
+
+      <select id="sort">
+        <option value="">Sort</option>
+        <option value="rating">Top Rated</option>
+        <option value="az">A-Z</option>
+      </select>
+
+      <button id="themeToggle">Toggle Mode</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="loader" class="loader">Loading...</div>
+    <div id="animeContainer"></div>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
