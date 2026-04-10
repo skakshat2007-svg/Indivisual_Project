@@ -8,6 +8,7 @@ const toggleBtn = document.getElementById("themeToggle");
 async function fetchGenres() {
   const res = await fetch("https://api.jikan.moe/v4/genres/anime");
   const data = await res.json();
+
   data.data.forEach(genre => {
     const option = document.createElement("option");
     option.value = genre.mal_id;
@@ -47,6 +48,7 @@ function displayAnime(list) {
 }
 searchInput.addEventListener("input", () => {
   const keyword = searchInput.value.toLowerCase();
+
   const filtered = allAnime.filter(anime =>
     anime.title.toLowerCase().includes(keyword)
   );
